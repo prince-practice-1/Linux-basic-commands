@@ -1,0 +1,420 @@
+
+Linux commands (terminal) - 
+
+1. pwd = to get the current directory.
+
+1. ls = ls is used to list all the files of the current directory. 
+
+1. cd = cd means change directory. It  is a command-line shell command used to change the current working directory in various operating systems.
+
+2. touch file_name = touch is used to create a file.
+
+3. rm file_name = rm is used to delete a file (it deletes that file whose name is file_name).
+
+4. mkdir file_name = mkdir is used to create a directory (or you can say - folder).
+
+5. rmdir file_name = rmdir is used to delete a file.
+
+6. clear = clear is used to clean the terminal.
+
+7. cat file_name = The cat command is a utility command in Linux. One of its most commonly known usages is to print the content of a file onto the standard output stream. Other than that, the cat command also allows us to write some texts into a file.  
+
+Cat(concatenate) command is very frequently used in Linux. It reads data from the file and gives their content as output.
+
+8. man ls = to open the manual
+
+9. cp file_name directory = it is used to copy a file which is present in current directory and it paste this file in directory which is mentioned in the command.
+
+10. ls -l file_name =  To know, what permissions are given to a file - 
+
+11. Permissions - 
+eg -  rwxrwxrwx
+
+first three letters = it signifies the pemissions which are given to admin.
+middle three letters = it signifies the permissions which are given to group.
+last three letters = it signifies the permissions which are given to public.
+
+==========================
+1 means = execute (x)
+2 means = write (w)
+4 means = read (r)
+==========================
+
+eg = permission in numbers - 
+admin = rwx  ( 4+2+1 = 7)
+group = rw   (4+2 = 6) 
+public = r   (4)
+
+To change the permission of a file, we can use the below command - 
+command = chmod 764 test_file
+
+That means, permission for test_file is changed to 764 (i.e, for admins = rwx, for group = rw, for public = r)
+
+-----------------------------
+
+12. Structure of a comand -
+
+a.-  command         option(s)             argument(s)
+            
+	-> command is a program, that we run. 
+    -> option modifies the behaviour of the command.
+    -> argument is the path where do we need to perform this operation.
+    -> option starts with a dash (i.e, -)
+
+    option and argument are writted based on the different requirements (or we can say - its optional, whenever we require it, we can use it.)
+
+13. whoami = it displays the effective user id. (i.e, it displays the username using which we have logged in.)
+
+14. who = who command show all logged in user on that system ( this commands displays the usernames of all the accounts which are logged in into that OS ). 
+
+15. whoami --help = it displays the information of whoami command.
+
+16. whoami --version = it displays the version information of "whoami" command.
+
+
+===================================================
+17. ls = LiSt the directory content.
+
+18. ls -t = (-t is option here) this command is used to sort the files which are present in current directory by modification time. (i.e, Last modified file will be displayed on top.)
+
+19. ls -1 = display one file(or one directory) per line only.
+
+20. ls -l = display long listing information about files and directories present in current directory.
+
+21. ls -lh = display long listing information if human readable form.
+
+22. ls -ld = display long listing information about directory.
+
+23. ls -lt = display details information with last modified time sorting.
+
+24. ls -ltr = display details information with last modified time sorting in reverse.
+
+25. ls -a or -A = display all files including hidden.
+
+26. ls -i = Display all contents with their inode numbers.
+
+27. we can also combine the options.
+like =   a. ls -t -1 or 
+		 b. ls -t1
+
+==================================================================
+
+28. pwd = it prints working directory. (It displays the path of working directory from root.) And note pls - path from root starts with / (forward slash).
+
+pwd command provides the absolute path.
+
+==================================================
+
+29. Paths of a file - 
+a. Absolute path = Absolute path of a file will be unique (only one).
+b. Relative path = Relative path of a file can be multiple.
+
+Absolute path = it defines the location of a file or directory from the root (/) directory.
+
+Relative path = it defines the location of a file or directory from the current working directory.
+
+================================================
+
+history command
+30. history = it shows all the commands typed on terminal from the last session.
+
+31. how to search in history = ( Ctrl + r )
+
+====================================
+
+clear command
+32. clear = it clears the terminal screen.
+
+clear command does not have any option with it.
+
+
+=====================================
+
+touch command :
+
+a. create one or more empty files.
+b. modify the timestamp of existing file or directory.
+
+c. touch file1 = it creates a empty file with name as "file1".
+
+d. touch file1 file2 file3 = it creates three empty files with name as "file1" , "file2", "file3".
+
+e. rm -rf * = it deletes all the content (files/directories) which is present in the current working directory.
+
+=======================================
+
+33. mkdir command :
+
+a. mkdir dir_name = it creates a directory inside the present working directory.
+
+we can also create directory inside a directory (i.e, nested directory).
+
+Let's say - we are in a folder which is named as "dir1". AND THIS dir1 folder is present on desktop. Now, we want to create a nested directory inside the "dir1". 
+i.e, Inside dir1 - I want to create dir2, then in dir2 -  i want dir3, then in dir3 - we want dir4.
+
+So, we can use this command, 
+= mkdir dir2/dir3/dir4. 
+
+=====================================
+
+34. rmdir command :  Remove directory.
+
+command = rmdir dir_name
+this command is used to remove (or delete) a directory (whose name is given in command itself) which is present in pwd.
+
+================================
+
+35. rm = used to delete files as well as directory.
+
+a. command = rm -r dir1 = this command is used to delete directory ("dir1").
+
+b. command = rm file1 = this command is used to delete a file (which is named as "file1").
+
+=================================
+
+36. cd command
+
+cd = Change Directory.
+. (single dot) means = current directory.
+.. (double dot) means = parent directory.
+
+
+MOST IMPORTANT = 
+Eg - 
+Directory structure => dir1/ dir2 / dir3 / dir4 / dir5.
+
+Let's say, currently we are in dir4. And we want to go to dir2.
+Then we can use this command =
+
+command = cd ../.. 
+
+Now, present directory would be dir2.
+
+===========================
+
+37. cat command :
+
+use of cat command :
+a. it is used to see(or print) the content of a file on terminal screen.
+b. concatenate and print the content of files.
+c. we can use this command to see the content of a file.
+d. we can concatenate the content of more than one file and then save that whole concatenated content into another file.
+
+cat -n file_name = it displays the content with line number.
+
+a. cat file1 = it will print the content of file1 on terminal screen.
+b. cat file2 = it will print the content of file2 on terminal screen.
+c. cat file1 file2 = it will print the concatenated content of file1 and file2 on the terminal screen.
+d. cat file1 file2 > file3 = it will concatenate the content of file1 and file2. And then it will create a file3. And will add that concatenated content into file3.
+
+======================================
+
+38. man command : 
+man command is used to open the manual of any command.
+
+To use man command = man <command>
+
+The above command will open the manual of the mentioned command.
+
+Press q to close the manual page.
+
+================================
+
+39. cp command :
+cp command is used to copy a file or a group of files or directories.
+
+
+cp -R dir1 = -R is a option and it isSyntax of cp command :
+cp [option] source_path Destination_path
+path could be absolute or relative.
+
+* means = wild card (it signifies all the content of a directory.)
+
+a. copy file1 into dir1 = cp file1 dir1
+b. copy all content of pwd(dir1) into dir2 = cp dir1 dir2
+
+
+
+=================================
+
+40. mv command :
+
+a. This command is used to rename/move a file or a group of files or directory.
+
+Syntax of mv command :
+mv [option] source_path Destination_path
+
+path could be absolute or relative.
+
+b. mv file1 file1_newname = file1 is renamed as file1_newname.
+
+c. mv file2 dir2/ = file2 will be moved to dir2.
+
+d. mv dir11 dir22 = dir11 will be renamed as dir22.
+
+=================================
+
+41. uname = it displays the information of the system.
+
+options which are used with uname command -:>>
+-a, -m, -n, -p, -s, -r, -v
+
+
+uname -a = displays all the information.
+uname -m = hardware name
+uname =n = hostname of the current computer.
+uname -p = prints type of the processor.
+uname -s = kernel name
+uname -r = kernal release
+uname -v = kernal version
+
+=================================
+
+42. free command : it displays the amount of free and used memory of system.
+
+free -m : it will show the memory in MB.
+free -g : it will show the memory in GB.
+free -b = it will show the memory in bytes.
+
+==============================
+
+
+43. tar command : Tape Archive
+
+Archive file = A file which is composed of one or more file and metadata.
+
+Archive file is -
+a. easily portable.
+b. simple to compress.
+c. takes less storage
+
+tar command is used to create as well as extract the archive.
+
+tar [options] [archive-name] [file or folder to be archive]
+
+[ important option for tar command ] = 
+
+-c = create archive
+-x = extract archive
+
+============================
+
+44. grep command : (Most Important)
+
+grep command = this command is used to search character pattern in a file.
+
+Syntax of grep command :
+grep [options] pattern file_path.
+
+Note please: pattern is written in double quotes.
+
+a. it can also seach the character pattern in multiple files at a time. 
+
+options :
+a. -c = display the number that how many lines got matched with the character pattern.
+b. -h = display the matched line and hide the file name
+c. by default, it displays the file name as well as the line which matched with the pattern.
+d. -i = Ignore the case, during matching. (if we don't use -i, bydefault its case-sensitive)
+e. -l = display the list of files only, not lines.
+d. -n = display the matched line, line number, and the file name.
+
+youtube video - https://www.youtube.com/watch?v=XjuWRQ4t7Nw&list=PLRXO6ANg6wvdqH7oj-fNAA4VXwpPpOu_K&index=22 (timing - 6:04)
+eg - 
+command = grep "lines" file1 file2
+
+this means, search this pattern("lines") in file1 and file2. 
+And then it returns the file names and the lines which matched the character pattern.
+
+
+=======================
+
+45. find command :
+
+find command = seach file or directory at the provided path.
+
+a->> Syntax : to seach file by name
+command = find [path] -name [filename]
+
+video - https://www.youtube.com/watch?v=sWQsHPfvzIA&list=PLRXO6ANg6wvdqH7oj-fNAA4VXwpPpOu_K&index=23
+
+eg - we are in "dir" directory.
+dir has dir1 and dir2.
+dir1 has dir3 and dir4
+dir 2 has dir 5 and dir6 and file1.txt.
+
+and then we run this command - 
+
+command = find ./ -name "file1.txt"
+
+this means we need to search file1.txt filename on this path(./). that means it needs to search the given file name in the current file hierarachy(decendents.)
+
+So, we will get the file1.txt in dir2.
+so, returned output will be relateive path of that file.
+
+============================================
+
+Vi editor =
+
+This is the most popular classic text editor in Linux family.
+b. Operation modes - 
+(i) command mode , (ii) Insert mode.
+
+Command mode -  it understands the command only and command are case-sensitive.
+Insert mode - we can write text only in this mode.
+
+=========
+
+a. how to open file - command = vi <file_name>
+(i) if this file (file_name) is present, then it will open in terminal only.
+(ii) if this file is not present, then it will create a empty file with the given name and will open that file.
+
+=========
+
+b. How to switch between insert mode and the command modes - 
+
+(i) Press "i" key to enter the Insert mode.
+(ii) Press "ESC" key to exit the Insert mode.
+
+=========
+
+c. If "Insert" is written at the bottom of terminal, that means - it is in insert mode.
+If "Insert" is not written there, that means - it is in command mode.
+
+d. In which mode, we can  save/close a file.
+This can only be done in "command mode".
+
+=========
+
+e. How to save or close the file.
+We can save or close a file only in "Command Mode".
+
+:w   = Save the changes.
+:q   = Close the file.
+:q!  = Close without saving.
+:wq  = Save and close the file.
+
+=========
+
+f. How can we move within a file  ?
+This can be done in Insert mode as well as command mode.
+
+If insert mode allow, we can use arrow keys.
+
+If command mode is there, then -
+k  = means up
+j  = down
+h  = left
+l  = right
+
+=========
+
+g. How can we delete character ?
+This can be done in Insert mode as well as command mode.
+
+{i} If insert mode allow, we can use delete(or backward) key.
+
+{ii} If command mode is there, then - 
+use x to delete a character.
+
+
+============================================
